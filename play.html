@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Josh's Quiz</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/play.css">
+</head>
+<body>
+    <div class="container">
+        <div id="game" class="justify-center flex column">
+            <!-- video element -->
+            <video id="background-video" autoplay loop muted poster="./assets/images//mylivewallpapers.com-Kyojuro-Rengoku-Sword-Flames.mp4">
+                <source src="./assets/images/mylivewallpapers.com-Kyojuro-Rengoku-Sword-Flames.mp4" type="video/mp4">
+                </video>
+                <!-- overhead display element / heads up display hud for short -->
+            <div id="hud">
+                <div id="hud-item">
+                    <p class="hud-prefix">
+                        Question
+                    </p>
+                  <h1 class="hud-main-text" id="questionCounter"></h1>
+                </div> 
+                <div id="hud-item">
+                    <p class="hud-prefix">
+                       Score
+                    </p>
+                  <h1 class="hud-main-text" id="score">
+                    0
+                  </h1>
+                </div> 
+                </div>
+                <!-- questions element and template -->
+            <a style="text-decoration:none" href="https://1drv.ms/o/s!AuuU_lZD8stxhgNwUiRHah4Fmq_h?e=YdWYgU" target="_blank" ><h2 id="question">Commonly used data Types do not include:</h2></a>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                   <p class="choice-text" data-number="1">Choice 1</p> 
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                   <p class="choice-text" data-number="2">Choice 2</p> 
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                   <p class="choice-text" data-number="3">Choice 3</p> 
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">D</p>
+                   <p class="choice-text" data-number="4">Choice 4</p> 
+            </div>
+        </div>
+    </div>
+    <script src="./assets/play.js"></script>
+</body>
+</html>

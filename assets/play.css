@@ -1,0 +1,122 @@
+.choice-container {
+    display: flex;
+    /* gives us space between the choices */
+    margin-bottom: 2rem;
+    width: 90%;
+    font-size: 1.8rem;
+    /* did this tocontrol the opacity */
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: white;
+    border-radius: 20px;
+  }
+  
+  #background-video {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  /* creates the white box for our questinosand gives  our questions there glow */
+  #question{
+    color: white;
+    text-shadow: 2px 2px #333, 3px 1px red;
+    border: solid;
+    background-color: rgba(4, 29, 51, 0.6);
+    padding-left: 1rem;
+    box-shadow: 1px 5px 10px 3px orange,
+                2px 3px 30px 2px red;
+  }
+
+  #question:hover{
+    background-color: #333;
+      cursor: pointer;
+  /* makes the button rise up on the y axis */
+  transform: translateY(-0.5rem);
+  /* controls how fast it moves */
+  transition: transform 350ms;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5),
+      0 .8rem 2rem 1rem #ecf5ff;
+   
+  }
+/* same hover element from original css */
+  .choice-container:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5),
+      0 .8rem 2rem 1rem #ecf5ff;
+    cursor: pointer;
+    /* makes the button rise up on the y axis */
+    transform: translateY(-0.5rem);
+  /* controls how fast it moves */
+    transition: transform 350ms;
+  }
+  
+  /* gave it some space on the sides and gave the letter a different color */
+  .choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: #eb56eb;
+    border-radius: 20px;
+    color: white;
+  }
+  
+  /* gave our text some padding in the container */
+  .choice-text {
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  /* gives our answers color when there correct or incorrect by targeting there added class */
+  .correct {
+    background-color: #76c776;
+  }
+
+  .incorrect {
+    background-color: rgb(226, 92, 68);
+  }
+
+  /* styling our over head elements */
+  /* this specific section is adding flex display so they show inline and adding a space between
+  so that each container is pushed to the eges */
+  #hud{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hud-prefix{
+    color: #ecf5ff;
+    text-shadow: 2px 2px #333;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+#hud h1{
+  font-size: 2.5rem;
+  color: #ecf5ff;
+  text-shadow: 2px 2px #333;
+  margin-bottom: 5rem;
+  border: solid;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgb(86, 165, 235, 0.25);
+  padding: 1.5rem;
+  box-shadow: 1px 2px 10px 3px #ebab56,
+                1px 15px 30px 3px #f76a0d;
+  
+}
+
+#hud-item:hover{
+cursor: pointer;
+  /* makes the button rise up on the y axis */
+  transform: translateY(-0.5rem);
+/* controls how fast it moves */
+  transition: transform 350ms;
+}
+
+#hud-item h1:hover{
+  background-color: #ebab56;
+}
