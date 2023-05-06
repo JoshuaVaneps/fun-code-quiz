@@ -39,8 +39,8 @@ h1,h2,h3,h4 {
 
 h1 {
   font-size: 5.4rem;
-  color: #333;
-  text-shadow: 2px 2px #ecf5ff;
+  color: #ecf5ff;
+  text-shadow: 2px 2px #333;
   margin-bottom: 5rem;
   border: solid;
   border-radius: 10px;
