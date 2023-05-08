@@ -59,7 +59,10 @@ let questions = [
 //we need to create a function to pull the question we got and update the count of how many questions we answered
     getNewQuestion = () => {
         if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-            return window.location.assign("/end.html");
+            //this allows us to save the score to local storage when were done
+            localStorage.setItem("mostRecentScore", score);
+            //this return takes us to the score page when we finish or time runs out
+            return window.location.assign("./end.html");
         }
 
         //raises our counter any time we get a new question gives us number 1 ewhen game starts

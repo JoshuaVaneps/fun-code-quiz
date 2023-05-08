@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="end" class="flex-center flex-column">
+            <video id="background-video" autoplay loop muted poster="./assets/images/Synthwave-Sunset-Grid.mp4">
+                <source src="assets/images/Retro-Waves-1.mp4" type="video/mp4">
+                </video>
+            <h1 id="finalScore"></h1>
+            <!-- form below allows user to submit score if they want to and gives us an input for them to give info -->
+            <form>
+                <input type="text" name="username" id="username" placeholder="username" />
+                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)"disabled>Save</button>
+            </form>
+            <a href="./play.html" class="btn">Play Again</a>
+            <a href="./index.html" class="btn">Return Home</a>
+        </div>
+    </div>
+    <script src="./assets/end.js"></script>
+</body>
+</html>
