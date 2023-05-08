@@ -2,7 +2,7 @@ const username = document.getElementById("username");
 const saveScoreBtn = document.getElementById("saveScoreBtn");
 const finalScore = document.getElementById("finalScore");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
-
+// turns our string into an array using parse
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 const MAX_HIGH_SCORES = 5;
@@ -21,7 +21,7 @@ saveHighScore = e => {
     //making it so we dont leave the page when we click save
     e.preventDefault();
 
-    const score = {
+    const score = { 
         //sorting our scores
         score: Math.floor(Math.random() * 100),
         name: username.value

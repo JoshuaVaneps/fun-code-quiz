@@ -70,7 +70,6 @@ h3 {
 /* gives us padding on the outside withheight and width maxed and centered everything on our screen with justify
 and align basically made the whols screen the container and then centered whats inside */
 .container {
-  background-image: url(./images/angry-naruto-and-sasuke-live-wallpaper.mp4);
   width: 100vw;
   height: 100vw;
   display: flex;
