@@ -17,13 +17,13 @@ username.addEventListener("keyup", () => {
 });
 
 saveHighScore = e => {
-    console.log("clicked the save button!");
+    alert("You successfully saved your score! Click below to check if you made the high score list or try again");
     //making it so we dont leave the page when we click save
     e.preventDefault();
 
     const score = { 
         //sorting our scores
-        score: Math.floor(Math.random() * 100),
+        score: mostRecentScore,
         name: username.value
       
     };
@@ -36,6 +36,8 @@ saveHighScore = e => {
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
     // window.location.assign("/");
+
+    saveScoreBtn.onclick = null;
 };
 
 

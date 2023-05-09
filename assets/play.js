@@ -5,6 +5,10 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const questionCounterText = document.getElementById("questionCounter");
 const scoreText = document.getElementById("score");
 
+var timeLeft =document.querySelector('#time-left');
+let currentTime = 10;
+let timerID = null
+
 let currentQuestion = {};
 //gives us a delay before the next answer
 let acceptingAnswers = false;
@@ -136,6 +140,23 @@ let questions = [
         //update our inner text of the score hud
         scoreText.innerText = score;
     }
+
+    function countDown () {
+        currentTime--
+        timeLeft.textContent = 'Time Left: ' + currentTime;
+        
+        if (currentTime == 0) {
+            clearInterval(countDownTimerID)
+            alert('GAME OVER! Your final Score is '+ score)
+            //this allows us to save the score to local storage when were done
+            localStorage.setItem("mostRecentScore", score);
+            //this return takes us to the score page when we finish or time runs out
+            return window.location.assign("./end.html");
+        }
+        }
+        
+        let countDownTimerID = setInterval(countDown, 1000);
+
 
     startGame();
 
